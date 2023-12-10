@@ -3,13 +3,13 @@
 #include "shell.h"
 
 /**
- * _stringlen - Get the length of a string.
+ * _strlen - Get the length of a string.
  *
  * @input_string: The string to measure.
  *
  * Return: The length of the string.
  */
-int _stringlen(const char *input_string)
+int _strlen(const char *input_string)
 {
     int length;
 
@@ -21,19 +21,19 @@ int _stringlen(const char *input_string)
 }
 
 /**
- * _stringdup - Duplicate a string.
+ * _strdup - Duplicate a string.
  *
  * @original_string: The string to duplicate.
  *
  * Return: A new string identical to the original.
  */
-char *_stringdup(const char *original_string)
+char *_strdup(const char *original_string)
 {
     char *duplicate;
     int index;
 
     /* Allocate memory for the new string. */
-    duplicate = malloc(sizeof(char) * (_stringlen(original_string) + 1));
+    duplicate = malloc(sizeof(char) * (_strlen(original_string) + 1));
 
     /* Check if memory allocation was successful. */
     if (duplicate == NULL)
@@ -51,14 +51,14 @@ char *_stringdup(const char *original_string)
 }
 
 /**
- * _stringcpy - Copy a string.
+ * _strcpy - Copy a string.
  *
  * @destination: The buffer to copy into.
  * @source: The string to copy.
  *
  * Return: The destination buffer with the copied string.
  */
-char *_stringcpy(char *destination, const char *source)
+char *_strcpy(char *destination, const char *source)
 {
     int index;
 
@@ -71,15 +71,17 @@ char *_stringcpy(char *destination, const char *source)
 }
 
 /**
- * _stringncmp - Compare two strings up to a certain number of characters.
+ * _strncmp - Compare two strings up to a certain number of characters.
  *
  * @first_string: The first string to compare.
  * @second_string: The second string to compare.
  * @num_bytes: The number of characters to compare.
  *
- * Return: 0 if the strings are equal, a positive value if the first string is greater, and a negative value if the second string is greater.
+ * Return: 0 if the strings are equal, a positive value if the first string is
+ * greater, and a negative value if the second string is greater.
  */
-int _stringncmp(const char *first_string, const char *second_string, size_t num_bytes)
+int _strncmp(const char *first_string, const char *second_string,
+		size_t num_bytes)
 {
     size_t index;
 
@@ -95,14 +97,14 @@ int _stringncmp(const char *first_string, const char *second_string, size_t num_
 }
 
 /**
- * _stringcat - Concatenate two strings.
+ * _strcat - Concatenate two strings.
  *
  * @destination: The buffer to concatenate into.
  * @source: The string to append.
  *
  * Return: The destination buffer with the concatenated string.
  */
-char *_stringcat(char *destination, const char *source)
+char *_strcat(char *destination, const char *source)
 {
     int dest_index, source_index;
 
