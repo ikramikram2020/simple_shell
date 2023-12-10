@@ -14,7 +14,7 @@ void _error_handler(char *name, int count, char **command, int status)
 {
 char *string_counter;
 
-string_counter = __itoa(count);
+string_counter = _itoa(count);
 write(STDERR_FILENO, name, _strlen(name));
 write(STDERR_FILENO, ": ", 2);
 write(STDERR_FILENO, string_counter, _strlen(string_counter));

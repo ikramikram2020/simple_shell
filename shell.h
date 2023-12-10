@@ -42,7 +42,7 @@ char *_itoa(int number);
 char *_get_path(void);
 
 /* Compare two strings up to a specified number of bytes. */
-int _strcmp(const char *first, const char *second, size_t no_bytes);
+int _strncmp(const char *first, const char *second, size_t no_bytes);
 
 /* Check the PATH for the existence of a command. */
 char *_check_path(const char *command);
