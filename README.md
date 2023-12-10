@@ -14,11 +14,6 @@ Welcome to the Simple Shell project, one of the most exciting and challenging pr
 ### Important Reminder ❗
 Before diving into the project, make sure to review the [project framework](https://intranet.alxswe.com/concepts/559). Pay close attention to the rules, especially the prohibition against looking at other people's code.
 
-### Learning Approach 🧠
-In the context of learning, remember:
-- **NEVER** copy code or look at solutions.
-- Always write code alone from scratch after seeking help to ensure understanding.
-- Do not share or use resources that provide step-by-step solution
 ### Project Specifics 📖
 The Simple Shell project involves creating a UNIX command-line interpreter. Here are some key points:
 
@@ -40,6 +35,53 @@ By the end of this project, you should be able to explain:
 - Editors: vi, vim, emacs
 - Use allowed functions and system calls only
 - Follow compilation and testing guidelines
+## File Overview 🗂️
+## File: string_operations.c
+
+| Function                    | Description                              |
+|-----------------------------|------------------------------------------|
+| `_strlen(const char *input)`| Returns the length of a string.          |
+| `_strdup(const char *input)`| Duplicates a string.                     |
+| `_strcpy(char *dest, const char *src)`| Copies a string from source to destination.|
+| `_strcmp(const char *first, const char *second, size_t nbr_bytes)`| Compares two strings up to a specified number of bytes.|
+| `_strcat(char *dest, const char *src)`| Concatenates two strings.                |
+
+
+## File: conversion_operations.c
+
+| Function                       | Description                              |
+|--------------------------------|------------------------------------------|
+| `_atoi(char *string)`           | Converts a string to an integer.         |
+| `_int_to_string(int number)`    | Converts an integer to a string.         |
+
+
+## File: command_operations.c
+
+| Function                          | Description                              |
+|-----------------------------------|------------------------------------------|
+| `_count_commands(const char *command)`| Counts the number of commands in a string.|
+| `_create_command(const char *command)`| Creates a command from a string.         |
+
+
+## File: error_operations.c
+
+| Function                          | Description                              |
+|-----------------------------------|------------------------------------------|
+| `_error_handler(char *name, int count, char *command, int status)`| Handles errors and prints relevant information.|
+| `_check_exit(char *full_command)`  | Checks if the command is an exit command. |
+
+
+## File: execution_operations.c
+
+| Function                          | Description                              |
+|-----------------------------------|------------------------------------------|
+| `_execute_command(char **argv, char *command, int count, char **env)`| Executes a command with arguments.    |
+| `_free_command(char *full_command)`| Frees memory allocated for a command.    |
+| `_get_input(void)`                | Gets input from the user.               |
+| `_get_path(void)`                 | Gets the PATH environment variable.     |
+| `_print_env(char *env)`           | Prints the current environment.         |
+| `_print_prompt(void)`             | Prints the command prompt.              |
+| `_check_path(const char *command)`| Checks if the command is in the PATH.   |
 
 ## Tasks Overview 🛠️
 ### 0. Betty would be proud
