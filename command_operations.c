@@ -16,7 +16,7 @@ int command_count = 0;
 char *token;
 if (command == NULL)
 return (0);
-command_copy = _stringdup(command);
+command_copy = _strdup(command);
 if (command_copy == NULL)
 {
 return (0);

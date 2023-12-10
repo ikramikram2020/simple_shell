@@ -32,13 +32,13 @@ return (num);
 }
 
 /**
- * _int_to_string - Converts an integer to a string.
+ * _itoa - Converts an integer to a string.
  *
  * @number: Integer to be converted.
  *
  * Return: String representation of the integer.
  */
-char *_int_to_string(int number)
+char *_itoa(int number)
 {
 int nbr_digits = 0, temp;
 char *string_int;
