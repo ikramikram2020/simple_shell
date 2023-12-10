@@ -40,5 +40,24 @@ free(string_counter);
  *
  * Return: -1 if invalid number, 0 on success.
  */
-int _check_exit(char **full_command);
+int _check_exit(char **full_command)
+{
+long int status;
 
+if (_strncmp(full_command[0], "exit", 4) == 0 && !full_command[1])
+{
+_free_command(full_command);
+exit(0);
+}
+status = _atoi(full_command[1]);
+if (_strncmp(full_command[0], "exit", 4) == 0
+&& status != -1)
+{
+_free_command(full_command);
+exit(status);
+}
+else if (_strncmp(full_command[0], "exit", 4) != 0)
+return (1);
+else
+return (-1);
+}
