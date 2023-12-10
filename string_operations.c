@@ -11,13 +11,12 @@
  */
 int _strlen(const char *input_string)
 {
-    int length;
+int length;
 
-    /* Count each character until the end of the string is reached. */
-    for (length = 0; input_string[length] != '\0'; length++)
-        ;
-
-    return (length);
+/* Count each character until the end of the string is reached. */
+for (length = 0; input_string[length] != '\0'; length++)
+;
+return (length);
 }
 
 /**
@@ -29,25 +28,22 @@ int _strlen(const char *input_string)
  */
 char *_strdup(const char *original_string)
 {
-    char *duplicate;
-    int index;
+char *duplicate;
+int index;
 
-    /* Allocate memory for the new string. */
-    duplicate = malloc(sizeof(char) * (_strlen(original_string) + 1));
-
-    /* Check if memory allocation was successful. */
-    if (duplicate == NULL)
-    {
-        perror("malloc");
-        exit(1);
-    }
-
-    /* Copy each character from the original string to the new string. */
-    for (index = 0; original_string[index] != '\0'; index++)
-        duplicate[index] = original_string[index];
-
-    duplicate[index] = '\0';
-    return (duplicate);
+/* Allocate memory for the new string. */
+duplicate = malloc(sizeof(char) * (_strlen(original_string) + 1));
+/* Check if memory allocation was successful. */
+if (duplicate == NULL)
+{
+perror("malloc");
+exit(1);
+}
+/* Copy each character from the original string to the new string. */
+for (index = 0; original_string[index] != '\0'; index++)
+duplicate[index] = original_string[index];
+duplicate[index] = '\0';
+return (duplicate);
 }
 
 /**
@@ -60,14 +56,12 @@ char *_strdup(const char *original_string)
  */
 char *_strcpy(char *destination, const char *source)
 {
-    int index;
-
-    /* Copy each character from the source string to the destination buffer. */
-    for (index = 0; source[index] != '\0'; index++)
-        destination[index] = source[index];
-
-    destination[index] = '\0';
-    return (destination);
+int index;
+/* Copy each character from the source string to the destination buffer. */
+for (index = 0; source[index] != '\0'; index++)
+destination[index] = source[index];
+destination[index] = '\0';
+return (destination);
 }
 
 /**
@@ -83,17 +77,15 @@ char *_strcpy(char *destination, const char *source)
 int _strncmp(const char *first_string, const char *second_string,
 		size_t num_bytes)
 {
-    size_t index;
-
-    /* Compare each character up to the specified number of bytes. */
-    for (index = 0; index < num_bytes; index++)
-    {
-        if (first_string[index] == second_string[index])
-            continue;
-        return (1);
-    }
-
-    return (0);
+size_t index;
+/* Compare each character up to the specified number of bytes. */
+for (index = 0; index < num_bytes; index++)
+{
+if (first_string[index] == second_string[index])
+continue;
+return (1);
+}
+return (0);
 }
 
 /**
@@ -106,16 +98,13 @@ int _strncmp(const char *first_string, const char *second_string,
  */
 char *_strcat(char *destination, const char *source)
 {
-    int dest_index, source_index;
-
-    /* Find the end of the destination string. */
-    for (dest_index = 0; destination[dest_index] != '\0'; dest_index++)
-        ;
-
-    /* Append each character from the source string to the destination string. */
-    for (source_index = 0; source[source_index] != '\0'; source_index++)
-        destination[source_index + dest_index] = source[source_index];
-
-    destination[source_index + dest_index] = '\0';
-    return (destination);
+int dest_index, source_index;
+/* Find the end of the destination string. */
+for (dest_index = 0; destination[dest_index] != '\0'; dest_index++)
+;
+/* Append each character from the source string to the destination string. */
+for (source_index = 0; source[source_index] != '\0'; source_index++)
+destination[source_index + dest_index] = source[source_index];
+destination[source_index + dest_index] = '\0';
+return (destination);
 }
