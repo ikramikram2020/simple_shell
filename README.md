@@ -52,7 +52,7 @@ By the end of this project, you should be able to explain:
 | Function                       | Description                              |
 |--------------------------------|------------------------------------------|
 | `_atoi(char *string)`           | Converts a string to an integer.         |
-| `_int_to_string(int number)`    | Converts an integer to a string.         |
+| `_itoa(int number)`    | Converts an integer to a string.         |
 
 
 ## File: command_operations.c
